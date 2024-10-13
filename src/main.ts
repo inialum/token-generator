@@ -1,6 +1,6 @@
 import dotenvx from "npm:@dotenvx/dotenvx";
-import { parseArgs } from "@std/cli/parse-args";
-import * as jose from "https://deno.land/x/jose@v5.9.4/index.ts";
+import { parseArgs } from "jsr:@std/cli/parse-args";
+import * as jose from "npm:jose";
 import { TOKEN_SECRET_NAME } from "./constants.ts";
 
 type TokenPayload = {
