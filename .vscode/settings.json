@@ -1,5 +1,11 @@
 {
-  "cSpell.words": ["dotenvx", "INIAD", "INIALUM"],
+  "cSpell.words": [
+    "dotenvx",
+    "INIAD",
+    "INIALUM",
+    "npmignore",
+    "testdata"
+  ],
   "deno.enable": true,
   "deno.lint": true,
   "editor.defaultFormatter": "denoland.vscode-deno",
