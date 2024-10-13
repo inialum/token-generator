@@ -1,5 +1,12 @@
 {
   "cSpell.words": ["dotenvx", "INIAD", "INIALUM"],
   "deno.enable": true,
-  "editor.defaultFormatter": "denoland.vscode-deno"
+  "deno.lint": true,
+  "editor.defaultFormatter": "denoland.vscode-deno",
+  "[typescript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  }
 }
