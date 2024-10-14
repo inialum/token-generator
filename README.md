@@ -35,12 +35,12 @@ CLI tool to generate a token for INIALUM services.
    ```json
    {
      "scripts": {
-       "generate-token": "inialum-token-generator --service <service_name> --env-file <path_to_env_file>"
+       "generate-token": "inialum-token-generator --service-name <service_name> --env-file <path_to_env_file>"
      }
    }
    ```
 
-   `--service` is required. It is the name of the service that will use the token.  
+   `--service-name` is required. It is the name of the service that will use the token.  
    `--env-file` is optional. If not provided, the tool will look for a `.env` file in the root of your project.
 
 4. Run the script in your project:
