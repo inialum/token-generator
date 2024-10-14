@@ -58,7 +58,7 @@ jobs:
           github-token: ${{ steps.app-token.outputs.token }}
           script: |
             await github.request(`POST /repos/${{ github.repository }}/releases`, {
-              tag_name: "${{ steps.get_tag_version.outputs.TAG_VERSION }}",
+              tag_name: "v${{ steps.get_tag_version.outputs.TAG_VERSION }}",
               generate_release_notes: true,
               draft: true,
             });
