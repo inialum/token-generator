@@ -22,6 +22,7 @@ await build({
   compilerOptions: {
     lib: ["ES2022"],
   },
+  packageManager: "pnpm",
   package: {
     // package.json properties
     name: "@inialum/token-generator",
