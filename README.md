@@ -21,10 +21,10 @@ CLI tool to generate a token for INIALUM services.
 2. Create a `.env` file in the root of your project:
 
    ```env
-   INIALUM_SERVICE_TOKEN_SECRET=<secret>
+   TOKEN_SECRET=<secret>
    ```
 
-   You can create random secret value for `INIALUM_SERVICE_TOKEN_SECRET` with the following command:
+   You can create random secret value for `TOKEN_SECRET` with the following command:
 
    ```shell
    openssl rand -base64 32

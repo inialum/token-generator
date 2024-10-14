@@ -9,7 +9,7 @@ Deno.test({
       new URL("./testdata/env.txt", import.meta.url),
     );
     await loadEnv(testdataPath);
-    const secret = Deno.env.get("INIALUM_SERVICE_TOKEN_SECRET");
+    const secret = Deno.env.get("TOKEN_SECRET");
 
     assertEquals(secret, "secret!");
   },
