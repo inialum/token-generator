@@ -52,6 +52,11 @@ jobs:
       - name: npm build
         run: deno run -A ./scripts/build_npm.ts ${{steps.get_tag_version.outputs.TAG_VERSION}}
 
+      - name: Publish package to npm
+        run: cd npm && pnpm publish --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+
       - name: Create release note
         uses: actions/github-script@v7
         with:
