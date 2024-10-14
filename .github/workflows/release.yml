@@ -1,9 +1,9 @@
 name: Release
-run-name: '${{github.event.inputs.versioning}} release'
+run-name: "${{github.event.inputs.versioning}} release"
 on:
   push:
     tags:
-      - 'v*'
+      - "v*"
   workflow_dispatch:
 
 jobs:
@@ -46,8 +46,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22.x'
-          registry-url: 'https://registry.npmjs.org'
+          node-version: "22.x"
+          registry-url: "https://registry.npmjs.org"
 
       - name: Get tag version
         if: startsWith(github.ref, 'refs/tags/')
