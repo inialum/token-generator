@@ -14,10 +14,8 @@ async function fileExists(path: string) {
   }
 }
 
-export async function loadEnv(path?: string) {
-  const DEFAULT_ENV_FILE = "./.env";
-
-  const isEnvFileExists = await fileExists(path || DEFAULT_ENV_FILE);
+export async function loadEnv(path: string) {
+  const isEnvFileExists = await fileExists(path);
   if (!isEnvFileExists) {
     throw new Error("Env file is not found");
   }

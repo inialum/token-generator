@@ -1,11 +1,18 @@
 import { parseArgs } from "jsr:@std/cli/parse-args";
+import { fromFileUrl, toFileUrl } from "jsr:@std/path";
+
 import { TOKEN_SECRET_NAME } from "./constants.ts";
 import { generateToken, loadEnv } from "./utils.ts";
+
+const DEFAULT_ENV_FILE = ".env";
 
 try {
   const args = parseArgs(Deno.args);
 
-  const envFilePath = args["env-file"];
+  const currentDir = Deno.cwd();
+  const envFilePath = fromFileUrl(
+    new URL(args["env-file"] || DEFAULT_ENV_FILE, toFileUrl(`${currentDir}/`)),
+  );
   if (typeof envFilePath !== "undefined" && typeof envFilePath !== "string") {
     throw new Error("env-file is invalid");
   }
