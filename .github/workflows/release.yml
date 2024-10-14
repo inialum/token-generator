@@ -53,7 +53,7 @@ jobs:
         run: deno run -A ./scripts/build_npm.ts ${{steps.get_tag_version.outputs.TAG_VERSION}}
 
       - name: Publish package to npm
-        run: cd npm && pnpm publish --provenance
+        run: cd npm && pnpm publish --provenance --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
 
