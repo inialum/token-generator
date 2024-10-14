@@ -1,1 +1,0 @@
-INIALUM_SERVICE_TOKEN_SECRET="This is a secret!"
