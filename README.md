@@ -2,7 +2,14 @@
 
 CLI tool to generate a token for INIALUM services.
 
-[![npm version](https://img.shields.io/npm/v/%40inialum%2Ftoken-generator?style=flat&label=npm%20version&color=36B011&cacheSeconds=3600)](https://www.npmjs.com/package/@inialum/token-generator)
+<div style="display: flex; column-gap: 10px;">
+   <a href="https://www.npmjs.com/package/@inialum/token-generator">
+      <img src="https://img.shields.io/npm/v/%40inialum%2Ftoken-generator?style=flat&label=npm%20version&color=36B011&cacheSeconds=3600" alt="" />
+   </a>
+   <a href="https://jsr.io/@inialum/token-generator">
+      <img src="https://jsr.io/badges/@inialum/token-generator" alt="" />
+   </a>
+</div>
 
 ## Usage
 
@@ -47,6 +54,15 @@ CLI tool to generate a token for INIALUM services.
 
    ```bash
    pnpm run generate-token
+   ```
+
+### Tips
+
+You can also install from JSR and run it on Deno:
+   
+   ```bash
+   deno install -g --allow-read --allow-env --allow-run -n inialum-token-generator jsr:@inialum/token-generator
+   inialum-token-generator -- <options>
    ```
 
 ## License
