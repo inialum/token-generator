@@ -1,5 +1,5 @@
-import { parseArgs } from "jsr:@std/cli/parse-args";
-import { fromFileUrl, toFileUrl } from "jsr:@std/path";
+import { parseArgs } from "@std/cli/parse-args";
+import { fromFileUrl, toFileUrl } from "@std/path";
 
 import { TOKEN_SECRET_NAME } from "./constants.ts";
 import { generateToken, loadEnv } from "./utils.ts";

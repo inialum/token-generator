@@ -1,5 +1,5 @@
-import dotenvx from "npm:@dotenvx/dotenvx";
-import * as jose from "npm:jose";
+import dotenvx from "@dotenvx/dotenvx";
+import * as jose from "jose";
 
 type TokenPayload = {
   service_name: string;

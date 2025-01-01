@@ -1,5 +1,5 @@
-import { assertEquals, assertRejects } from "jsr:@std/assert";
-import { fromFileUrl } from "jsr:@std/path";
+import { assertEquals, assertRejects } from "@std/assert";
+import { fromFileUrl } from "@std/path";
 import { loadEnv } from "./utils.ts";
 
 Deno.test({
