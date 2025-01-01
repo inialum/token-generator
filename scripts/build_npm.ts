@@ -1,5 +1,5 @@
-import { build, emptyDir } from "jsr:@deno/dnt";
-import { copy } from "jsr:@std/fs";
+import { build, emptyDir } from "@deno/dnt";
+import { copy } from "@std/fs";
 
 await emptyDir("./npm");
 await Deno.remove("npm", { recursive: true }).catch((_) => {});
@@ -17,6 +17,7 @@ await build({
   shims: {
     deno: true,
   },
+  importMap: "deno.json",
   scriptModule: false,
   typeCheck: false,
   compilerOptions: {
