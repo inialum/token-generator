@@ -2,8 +2,8 @@ import { build, emptyDir } from "@deno/dnt";
 import { copy } from "@std/fs";
 
 await emptyDir("./npm");
-await Deno.remove("npm", { recursive: true }).catch((_) => {});
-await copy("src/testdata", "npm/esm/testdata", { overwrite: true });
+await Deno.remove("./npm", { recursive: true }).catch((_) => {});
+await copy("./src/testdata", "./npm/esm/testdata", { overwrite: true });
 
 await build({
   entryPoints: [
@@ -17,20 +17,19 @@ await build({
   shims: {
     deno: true,
   },
-  importMap: "deno.json",
+  importMap: "./deno.json",
   scriptModule: false,
   typeCheck: false,
   compilerOptions: {
     lib: ["ES2022"],
   },
-  packageManager: "pnpm",
   package: {
     // package.json properties
     name: "@inialum/token-generator",
     version: Deno.args[0],
     description: "CLI tool to generate token",
     license: "Apache-2.0",
-    main: "esm/main.js",
+    main: "./esm/main.js",
     publishConfig: {
       access: "public",
     },
@@ -48,13 +47,13 @@ await build({
     },
   },
   postBuild() {
-    Deno.copyFileSync("LICENSE", "npm/LICENSE");
-    Deno.copyFileSync("README.md", "npm/README.md");
+    Deno.copyFileSync("./LICENSE", "./npm/LICENSE");
+    Deno.copyFileSync("./README.md", "./npm/README.md");
   },
 });
 
 await Deno.writeTextFile(
-  "npm/.npmignore",
+  "./npm/.npmignore",
   "esm/testdata/",
   { append: true },
 );
