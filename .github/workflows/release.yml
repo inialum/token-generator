@@ -57,6 +57,9 @@ jobs:
       - name: npm build
         run: deno run -A ./scripts/build_npm.ts ${{steps.get_tag_version.outputs.TAG_VERSION}}
 
+      - name: Publish package to JSR
+        run: deno publish --allow-dirty --set-version ${{steps.get_tag_version.outputs.TAG_VERSION}}
+
       - name: Publish package to npm
         run: cd npm && pnpm publish --provenance --no-git-checks
         env:
