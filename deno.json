@@ -1,16 +1,31 @@
 {
+  "name": "@inialum/token-generator",
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "exports": "./src/main.ts",
+  "publish": {
+    "include": [
+      "LICENSE",
+      "README.md",
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "src/**/*_test.ts",
+      "src/testdata/**/*"
+    ]
+  },
   "tasks": {
     "dev": "deno run --watch ./src/main.ts",
     "test:ci": "deno test -A --failfast"
   },
   "imports": {
     "@deno/dnt": "jsr:@deno/dnt@^0.41.3",
-    "@dotenvx/dotenvx": "npm:@dotenvx/dotenvx@^1.19.0",
-    "@std/assert": "jsr:@std/assert@1",
-    "@std/cli": "jsr:@std/cli@^1.0.6",
-    "@std/fs": "jsr:@std/fs@^1.0.4",
-    "@std/path": "jsr:@std/path@^1.0.6",
-    "jose": "npm:jose@^5.9.4"
+    "@dotenvx/dotenvx": "npm:@dotenvx/dotenvx@^1.32.0",
+    "@std/assert": "jsr:@std/assert@^1.0.10",
+    "@std/cli": "jsr:@std/cli@^1.0.9",
+    "@std/fs": "jsr:@std/fs@^1.0.8",
+    "@std/path": "jsr:@std/path@^1.0.8",
+    "jose": "npm:jose@^5.9.6"
   },
   "exclude": ["npm"],
   "fmt": {
