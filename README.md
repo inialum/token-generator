@@ -2,6 +2,7 @@
 
 CLI tool to generate a token for INIALUM services.
 
+<!-- markdownlint-disable no-inline-html -->
 <div style="display: flex; column-gap: 10px;">
    <a href="https://www.npmjs.com/package/@inialum/token-generator">
       <img src="https://img.shields.io/npm/v/%40inialum%2Ftoken-generator?style=flat&label=npm%20version&color=36B011&cacheSeconds=3600" alt="" />
@@ -59,11 +60,21 @@ CLI tool to generate a token for INIALUM services.
 ### Tips
 
 You can also install from JSR and run it on Deno:
-   
+
    ```bash
    deno install -g --allow-read --allow-env --allow-run -n inialum-token-generator jsr:@inialum/token-generator
    inialum-token-generator -- <options>
    ```
+
+## Release
+
+Use the following release flow:
+
+1. Create a tag on `main` (example: `vX.Y.Z`).
+2. Push only the tag: `git push origin vX.Y.Z`.
+3. Wait for GitHub Actions `Release` workflow to publish to npm/JSR and create a draft release note.
+4. Edit the draft release description on GitHub.
+5. Publish the release.
 
 ## License
 
