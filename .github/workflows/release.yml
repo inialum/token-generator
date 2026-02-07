@@ -46,7 +46,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "22.x"
+          node-version: "24.x"
           registry-url: "https://registry.npmjs.org"
 
       - name: Get tag version
@@ -62,8 +62,6 @@ jobs:
 
       - name: Publish package to npm
         run: cd npm && pnpm publish --provenance --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
 
       - name: Create release note
         uses: actions/github-script@v7
