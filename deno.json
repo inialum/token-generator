@@ -18,13 +18,13 @@
     "test:ci": "deno test -A --failfast"
   },
   "imports": {
-    "@deno/dnt": "jsr:@deno/dnt@^0.41.3",
-    "@dotenvx/dotenvx": "npm:@dotenvx/dotenvx@^1.32.0",
-    "@std/assert": "jsr:@std/assert@^1.0.10",
-    "@std/cli": "jsr:@std/cli@^1.0.9",
-    "@std/fs": "jsr:@std/fs@^1.0.8",
-    "@std/path": "jsr:@std/path@^1.0.8",
-    "jose": "npm:jose@^5.9.6"
+    "@deno/dnt": "jsr:@deno/dnt@^0.43.2",
+    "@dotenvx/dotenvx": "npm:@dotenvx/dotenvx@^2.21.0",
+    "@std/assert": "jsr:@std/assert@^1.0.19",
+    "@std/cli": "jsr:@std/cli@^1.0.32",
+    "@std/fs": "jsr:@std/fs@^1.0.24",
+    "@std/path": "jsr:@std/path@^1.1.6",
+    "jose": "npm:jose@^6.2.8"
   },
   "exclude": ["npm"],
   "fmt": {

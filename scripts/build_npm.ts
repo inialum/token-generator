@@ -17,7 +17,7 @@ await build({
   shims: {
     deno: true,
   },
-  importMap: "./deno.json",
+  // Let dnt auto-discover deno.json so bare import prefixes expand to subpaths.
   scriptModule: false,
   typeCheck: false,
   compilerOptions: {
