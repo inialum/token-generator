@@ -17,14 +17,12 @@ await build({
   shims: {
     deno: true,
   },
-  importMap: "./deno.json",
   scriptModule: false,
   typeCheck: false,
   compilerOptions: {
     lib: ["ES2022"],
   },
   package: {
-    // package.json properties
     name: "@inialum/token-generator",
     version: Deno.args[0],
     description: "CLI tool to generate token",
