@@ -17,14 +17,12 @@ await build({
   shims: {
     deno: true,
   },
-  // Let dnt auto-discover deno.json so bare import prefixes expand to subpaths.
   scriptModule: false,
   typeCheck: false,
   compilerOptions: {
     lib: ["ES2022"],
   },
   package: {
-    // package.json properties
     name: "@inialum/token-generator",
     version: Deno.args[0],
     description: "CLI tool to generate token",
